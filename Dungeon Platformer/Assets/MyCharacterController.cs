@@ -28,7 +28,7 @@ public class MyCharacterController : MonoBehaviour
 		
 	}
 
-	public void Move(float move){
+	public void Move(float move, bool jumping){
 		Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
 
 		rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
@@ -45,6 +45,9 @@ public class MyCharacterController : MonoBehaviour
 			Flip();
 		}
 
+		if(jumping){
+			rb.AddForce(new Vector2(0f, m_JumpForce));
+		}
 
 	}
 

@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca6034e793bac2144977c48c9d3101a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 300
   m_MovementSmoothing: 0.05
 --- !u!50 &1879263125
 Rigidbody2D:

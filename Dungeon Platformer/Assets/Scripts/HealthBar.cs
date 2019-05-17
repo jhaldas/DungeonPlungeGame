@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-	
 	private Transform bar;
 
     // Start is called before the first frame update
@@ -13,11 +12,6 @@ public class HealthBar : MonoBehaviour
         bar = transform.Find("Bar");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 	public void SetSize(float SizeNormalized){
 		bar.localScale = new Vector3(SizeNormalized, 1f);

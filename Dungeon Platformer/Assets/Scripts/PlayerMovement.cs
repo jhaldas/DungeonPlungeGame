@@ -21,8 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		maxHP = 100;
-        playerHealth = new Health(maxHP);
+		playerHealth = new Health(maxHP);
     }
 
     // Update is called once per frame
@@ -37,8 +36,6 @@ public class PlayerMovement : MonoBehaviour
 
 		Debug.Log(maxHP);
 		Debug.Log(playerHealth.GetCurrentHP());
-
-		//bar.SetSize(.5f);
 	}
 
 	void FixedUpdate(){

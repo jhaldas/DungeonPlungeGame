@@ -5,9 +5,8 @@ using UnityEngine;
 // This class will be used anytime an object has a certain amount of health.  Health will be referred to as HP (hitpoints).
 public class Health : MonoBehaviour
 {
-	private HealthBar bar;
-
-	private float maxHP;
+	//public HealthBar bar;
+	public float maxHP;
 	private float currentHP;
 
 	public Health(float maxHP){
@@ -15,17 +14,19 @@ public class Health : MonoBehaviour
 		currentHP = maxHP;
 	}
 
+	public float GetHealthPercentage(){
+		return currentHP / maxHP;
+	}
+
 	// The following method takes health away from the targets current HP and returns true the target took lethal damage
 	public bool TakeDamage(float dmgDealth){
 		currentHP = currentHP - dmgDealth;
-
+		//bar.SetSize(.5f);
 		if(currentHP <= 0){
 			currentHP = 0;
 			return true;
 		}
-
 		return false;
-
 	}
 
 

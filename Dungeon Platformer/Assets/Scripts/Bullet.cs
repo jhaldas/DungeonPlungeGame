@@ -25,7 +25,8 @@ public class Bullet : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D col){
 		if(col.gameObject.tag == "Enemy"){
-			//col.gameObject.TakeDamage(damage);
+			GameObject enemy = col.gameObject;
+			enemy.GetComponent<EnemyHandler>().TakeDamage(damage);
 		}
 		Destroy(gameObject);
 	}

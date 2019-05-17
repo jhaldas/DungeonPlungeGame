@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 	public MyCharacterController controller;
 	private Health playerHealth;
 
-	public HealthBar bar;
+	//public HealthBar bar;
 
 	public float runSpeed = 40f;
 
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 			playerHealth.TakeDamage(50);
 			Debug.Log("MAXHP: " + maxHP);
 			Debug.Log("CURRENT HP" + playerHealth.GetCurrentHP());
-			bar.SetSize(playerHealth.GetCurrentHP()/maxHP);
+			//bar.SetSize(playerHealth.GetCurrentHP()/maxHP);
 		}
 	}
 }

@@ -9,14 +9,15 @@ public class Coin : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		float x = Random.Range(-2, 2);
+		rb = GetComponent<Rigidbody2D>();
+		float x = Random.Range(-50, 50);
 		startDirection = new Vector2 (x, 0);
+		rb.AddForce(startDirection);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//startDirection.Normalize ();
-		//rb.transform = rb.position + startDirection;
+		
 	}
 
 

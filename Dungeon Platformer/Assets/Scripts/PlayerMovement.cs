@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
 	float hMovement = 0f;
 
+	int money = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,5 +54,14 @@ public class PlayerMovement : MonoBehaviour
 			Debug.Log("CURRENT HP" + playerHealth.GetCurrentHP());
 			//bar.SetSize(playerHealth.GetCurrentHP()/maxHP);
 		}
+
+		if(col.gameObject.tag == "Coin"){
+			Destroy(col.gameObject);
+			money += 5;
+		}
+
+
 	}
+
+
 }

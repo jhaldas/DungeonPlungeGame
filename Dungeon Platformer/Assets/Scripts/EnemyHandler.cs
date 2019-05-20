@@ -13,6 +13,8 @@ public class EnemyHandler : MonoBehaviour
 	private Rigidbody2D rb;
 	//public HealthBar bar;
 
+	public GameObject coinPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,7 @@ public class EnemyHandler : MonoBehaviour
     }
 
 	void Die(){
+		CoinRewarder.Spawn(gameObject.transform, 2, 5, coinPrefab);
 		Destroy(gameObject);
 	}
 

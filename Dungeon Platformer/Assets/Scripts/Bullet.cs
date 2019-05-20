@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         
     }
 
-	void OnCollisionEnter2D(Collision2D col){
+	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Enemy"){
 			GameObject enemy = col.gameObject;
 			enemy.GetComponent<EnemyHandler>().TakeDamage(damage);

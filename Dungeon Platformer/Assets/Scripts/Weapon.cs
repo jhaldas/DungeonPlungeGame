@@ -8,6 +8,8 @@ public class Weapon : MonoBehaviour
 	public float damage = 50f;
 	public float speed = 20f;
 
+	private float knockback = 10f;
+
 	public Transform firePoint;
 	public GameObject bullet;
 
@@ -28,5 +30,6 @@ public class Weapon : MonoBehaviour
 
 	void Shoot(){
 		Instantiate(bullet, firePoint.position, firePoint.rotation);
+
 	}
 }

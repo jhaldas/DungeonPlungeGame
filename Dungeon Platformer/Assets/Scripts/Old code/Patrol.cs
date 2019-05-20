@@ -33,7 +33,7 @@ public class Patrol : MonoBehaviour {
 	void Start () {
 		walking = true;
 		direction = Random.Range (0, 1);
-		crocAnimator = GetComponent<Animator> ();
+		//crocAnimator = GetComponent<Animator> ();
 		if (direction == 0) {
 			facingRight = false;	
 		} else {
@@ -86,9 +86,9 @@ public class Patrol : MonoBehaviour {
 
 	private void ControlAnimator(){
 		if (walking == true) {
-			crocAnimator.SetTrigger ("walking");
+			//crocAnimator.SetTrigger ("walking");
 		} else {
-			crocAnimator.ResetTrigger ("walking");
+			//crocAnimator.ResetTrigger ("walking");
 		}
 	}
 }

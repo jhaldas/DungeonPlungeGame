@@ -8,6 +8,8 @@ public class EnemyHandler : MonoBehaviour
 	public Health enemyHealth;
 	public float maxHP = 100;
 
+	public Animator animator;
+
 	private Rigidbody2D rb;
 	//public HealthBar bar;
 
@@ -31,11 +33,17 @@ public class EnemyHandler : MonoBehaviour
 	}
 
 	public void TakeDamage(float damage){
+		animator.SetBool("isHit", true);
 		enemyHealth.TakeDamage(damage);
+		//animator.SetBool("isHit", false);
 	}
 
 	public void Knockback(Vector3 force){
 		rb.AddForce(force);
+	}
+
+	public void hitEnded(){
+		animator.SetBool("isHit", false);
 	}
 
 

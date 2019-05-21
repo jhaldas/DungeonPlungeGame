@@ -34,15 +34,17 @@ public class PlayerMovement : MonoBehaviour
 
 		if(Input.GetButtonDown("Jump")){
 			jump = true;
+		}else{
+			jump = false;
 		}
 
-		Debug.Log(maxHP);
+		Debug.Log("jump: " + jump);
 		Debug.Log(playerHealth.GetCurrentHP());
 	}
 
 	void FixedUpdate(){
 		controller.Move(hMovement * Time.fixedDeltaTime, jump);
-		jump = false;
+		//jump = false;
 	}
 
 	void OnCollisionEnter2D(Collision2D col)

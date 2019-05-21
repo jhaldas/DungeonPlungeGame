@@ -9,7 +9,7 @@ public class MyCharacterController : MonoBehaviour
 	private Rigidbody2D rb;
 	private bool facingRight = true;
 
-	[SerializeField] private float m_JumpForce = 400f;
+	[Range(0, 50f)][SerializeField] public float m_JumpForce = 10f;
 
 	private Vector3 m_Velocity = Vector3.zero;
 
@@ -46,7 +46,7 @@ public class MyCharacterController : MonoBehaviour
 		}
 
 		if(jumping){
-			rb.AddForce(new Vector2(0f, m_JumpForce));
+			rb.velocity = rb.velocity + (Vector2.up * m_JumpForce);
 		}
 
 	}

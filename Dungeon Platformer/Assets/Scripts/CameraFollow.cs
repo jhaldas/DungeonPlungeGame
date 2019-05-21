@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
 
 	public Transform player;
-	public float cameraDistance = 30f;
+	[Range(1, 50f)]public float cameraDistance = 30f;
 	private Vector3 offset;
 
 

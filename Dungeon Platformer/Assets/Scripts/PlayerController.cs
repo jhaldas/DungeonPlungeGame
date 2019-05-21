@@ -52,4 +52,12 @@ public class PlayerController : PhysicsObject
 
 		transform.Rotate(0f, 180f, 0f);
 	}
+
+	void OnTriggerEnter2D(Collider2D col)
+    {
+		if(col.gameObject.tag == "Coin"){
+			Destroy(col.gameObject);
+			//money += 5;
+		}
+	}
 }

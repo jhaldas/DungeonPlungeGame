@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2457634587601045952}
   - component: {fileID: 5849237872693035585}
   m_Layer: 0
-  m_Name: CoinPrefab 1
+  m_Name: CoinPrefab
   m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +98,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0010290146, y: -0.23602304}
+  m_Offset: {x: 0.0023415089, y: -0.23126802}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,7 +109,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06548405, y: 0.027953923}
+  m_Size: {x: 0.009610653, y: 0.037557304}
   m_EdgeRadius: 0
 --- !u!95 &2457634587601045983
 Animator:

@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
 	public Transform player;
 	[Range(1, 50f)]public float cameraDistance = 30f;
 	private Vector3 offset;
+	[Range(1, 1000f)] public float cameraSpeed = 50;
 
 
     // Start is called before the first frame update
@@ -20,6 +21,6 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = player.transform.position + offset;
+        transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
     }
 }

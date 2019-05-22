@@ -17,7 +17,7 @@ public class PhysicsObject: MonoBehaviour
 	protected const float minMoveDistance = 0.001f;
 	protected ContactFilter2D contactFilter;
 	protected RaycastHit2D[] hitBuffer =new RaycastHit2D[16];
-	protected const float shellRadius = 0.01f;
+	protected const float shellRadius = 0.03f;
 	protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>(16);
 
     // Start is called before the first frame update
@@ -40,9 +40,7 @@ public class PhysicsObject: MonoBehaviour
 		ComputeVelocity();
     }
 
-	protected virtual void ComputeVelocity(){
-	
-	}
+	protected virtual void ComputeVelocity(){}
 
 	void FixedUpdate(){
 		velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;

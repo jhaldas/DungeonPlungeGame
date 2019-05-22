@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-	public Transform player;
+	public GameObject player;
 	[Range(1, 50f)]public float cameraDistance = 30f;
 	private Vector3 offset;
 	[Range(1, 1000f)] public float cameraSpeed = 50;
@@ -21,6 +21,9 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
+		if(!player.GetComponent<PlayerController>().IsDead()){
+			transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
+		}
+        
     }
 }

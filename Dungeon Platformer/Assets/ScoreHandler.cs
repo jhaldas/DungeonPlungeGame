@@ -8,6 +8,7 @@ public class ScoreHandler: MonoBehaviour
 	
 	public PlayerController player;
 	public Text scoreText;
+	public GameObject gameOver;
 	
 
     // Start is called before the first frame update
@@ -20,5 +21,8 @@ public class ScoreHandler: MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + player.GetMoney().ToString("0");
+		if(player.GetComponent<PlayerController>().IsDead()){
+			gameOver.SetActive(true);
+		}
     }
 }

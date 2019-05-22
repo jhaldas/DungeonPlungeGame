@@ -12,6 +12,7 @@ public class PlayerController : PhysicsObject
 
 	private int money = 0;
 
+	private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,10 @@ public class PlayerController : PhysicsObject
 
 		targetVelocity = move * maxSpeed;
 
+		if(transform.position.y <= -8){
+			Die();
+		}
+
 	}
 
 	private void Flip()
@@ -65,5 +70,14 @@ public class PlayerController : PhysicsObject
 
 	public int GetMoney(){
 		return money;
+	}
+
+	public bool IsDead(){
+		return isDead;
+	}
+
+	public void Die(){
+		isDead = true;
+		
 	}
 }

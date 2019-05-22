@@ -78,6 +78,5 @@ public class PlayerController : PhysicsObject
 
 	public void Die(){
 		isDead = true;
-		
 	}
 }

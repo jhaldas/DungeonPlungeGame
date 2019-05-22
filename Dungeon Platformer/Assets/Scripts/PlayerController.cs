@@ -10,6 +10,8 @@ public class PlayerController : PhysicsObject
 
 	private bool facingRight = true;
 
+	private int money = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +59,11 @@ public class PlayerController : PhysicsObject
     {
 		if(col.gameObject.tag == "Coin"){
 			Destroy(col.gameObject);
-			//money += 5;
+			money += 5;
 		}
+	}
+
+	public int GetMoney(){
+		return money;
 	}
 }

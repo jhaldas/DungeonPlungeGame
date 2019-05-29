@@ -7,8 +7,7 @@ public class Bullet : MonoBehaviour
 
 	private float speed = 20f;
 	private float damage = 50f;
-
-	public float knockback = 10f;
+	public float knockback = 0.4f;
 
 	private Vector3 bulletForce;
 
@@ -22,7 +21,7 @@ public class Bullet : MonoBehaviour
 		this.knockback = knockback;
 	}
 
-    // Start is called before the first frame update
+    // Bullet will move forward indefinately
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -41,7 +40,7 @@ public class Bullet : MonoBehaviour
 
 			bulletForce = rb.velocity;
 
-			enemy.GetComponent<EnemyHandler>().Knockback(bulletForce * knockback);
+			enemy.GetComponent<EnemyMove>().TakeKnockback(rb, 0.4f);
 		}
 		Destroy(gameObject);
 	}

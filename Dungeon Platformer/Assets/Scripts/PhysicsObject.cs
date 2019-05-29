@@ -63,7 +63,7 @@ public class PhysicsObject: MonoBehaviour
 	}
 
 
-	void Movement(Vector2 move, bool yMovement){
+	protected void Movement(Vector2 move, bool yMovement){
 		float distance = move.magnitude;
 
 		if(distance > minMoveDistance){

@@ -7,8 +7,7 @@ public class Weapon : MonoBehaviour
 	
 	public float damage = 50f;
 	public float speed = 20f;
-
-	private float knockback = 10f;
+	public float knockback = 0.4f;
 
 	public Transform firePoint;
 	public GameObject bullet;

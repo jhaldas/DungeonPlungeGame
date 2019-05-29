@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 			//bar.SetSize(playerHealth.GetCurrentHP()/maxHP);
 		}
 
+		// Handels collisions with coin game object
 		if(col.gameObject.tag == "Coin"){
 			Destroy(col.gameObject);
 			money += 5;

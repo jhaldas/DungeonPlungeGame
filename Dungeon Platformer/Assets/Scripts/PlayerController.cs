@@ -54,7 +54,7 @@ public class PlayerController : PhysicsObject
 
 	private void Flip()
 	{
-		// Switch the way the player is labelled as facing.
+		// Switch the way the player is facing.
 		facingRight = !facingRight;
 
 		transform.Rotate(0f, 180f, 0f);
@@ -79,4 +79,6 @@ public class PlayerController : PhysicsObject
 	public void Die(){
 		isDead = true;
 	}
+
+	
 }

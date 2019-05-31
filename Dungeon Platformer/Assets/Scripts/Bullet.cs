@@ -7,7 +7,9 @@ public class Bullet : MonoBehaviour
 
 	private float speed = 20f;
 	private float damage = 50f;
-	public float knockback = 0.4f;
+	private float knockback = 3f;
+
+	public Vector2 velocity;
 
 	private Vector3 bulletForce;
 
@@ -18,19 +20,19 @@ public class Bullet : MonoBehaviour
 	public void BulletAttributes(float damage, float speed, float knockback){
 		this.damage = damage;
 		this.speed = speed;
-		this.knockback = knockback;
+		//this.knockback = knockback;
 	}
 
     // Bullet will move forward indefinately
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        velocity = transform.right * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb.velocity = velocity;
     }
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -40,7 +42,7 @@ public class Bullet : MonoBehaviour
 
 			bulletForce = rb.velocity;
 
-			enemy.GetComponent<EnemyMove>().TakeKnockback(rb, 0.4f);
+			enemy.GetComponent<EnemyMove>().TakeKnockback(rb, knockback);
 		}
 		Destroy(gameObject);
 	}

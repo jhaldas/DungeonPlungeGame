@@ -10,12 +10,17 @@ public class CameraFollow : MonoBehaviour
 	private Vector3 offset;
 	[Range(1, 1000f)] public float cameraSpeed = 50;
 
+	public float cameraPosition;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height/2) / cameraDistance);
+        //GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height/2) / cameraDistance);
 		offset = transform.position - player.transform.position;
+		Debug.Log("Orthographic Size: " + GetComponent<UnityEngine.Camera>().orthographicSize);
+
+		cameraPosition = transform.position.x;
     }
 
     // Update is called once per frame
@@ -26,4 +31,12 @@ public class CameraFollow : MonoBehaviour
 		}
         
     }
+
+	void Update(){
+		cameraPosition = transform.position.x;
+	}
+
+	public float GetCameraPositionX(){
+		return cameraPosition;
+	}
 }

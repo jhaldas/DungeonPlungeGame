@@ -14,6 +14,8 @@ public class PlayerController : PhysicsObject
 
 	private bool isDead = false;
 
+	Vector2 move;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class PlayerController : PhysicsObject
     }
 
     protected override void ComputeVelocity(){
-		Vector2 move = Vector2.zero;
+		move = Vector2.zero;
 
 		move.x = Input.GetAxis("Horizontal");
 
@@ -62,9 +64,16 @@ public class PlayerController : PhysicsObject
 
 	void OnTriggerEnter2D(Collider2D col)
     {
+		Debug.Log("Here");
+
 		if(col.gameObject.tag == "Coin"){
 			Destroy(col.gameObject);
 			money += 5;
+		}
+
+		if(col.gameObject.tag == "Enemy"){
+			PlayerTakeKnockback(col.gameObject.GetComponent<PhysicsObject>().velocity, 50f);
+			//move = Vector2.zero;
 		}
 	}
 
@@ -78,6 +87,17 @@ public class PlayerController : PhysicsObject
 
 	public void Die(){
 		isDead = true;
+	}
+
+	protected void PlayerTakeKnockback(Vector2 velocity, float knockback){
+		Debug.Log("" + velocity * knockback);
+		//Movement(rb2.velocity.normalized * knockback, false);
+		targetVelocity = velocity * knockback;
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+		//Debug.Log("Here");
+		
 	}
 
 	

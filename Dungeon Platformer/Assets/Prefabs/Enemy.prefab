@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 2984456259665843169}
   - component: {fileID: 2984456259665843170}
   - component: {fileID: -1838011856389876075}
+  - component: {fileID: 1954416378}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -436,7 +437,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2984456259665843194}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -528,3 +529,29 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   minGroundNormalY: 0.65
   rb: {fileID: 0}
+  speed: 3
+  patrol: {fileID: 1954416378}
+--- !u!114 &1954416378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2984456259665843194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad83caa731073214cb318dd47361035a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  aggroSpeed: 0
+  direction: 0
+  facingRight: 0
+  distance: 1
+  minWalkingTime: 0
+  maxWalkingTime: 0
+  aggro: 0
+  platformMask:
+    serializedVersion: 2
+    m_Bits: 256
+  groundDetection: {fileID: 2984456259665843198}

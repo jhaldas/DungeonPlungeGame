@@ -554,7 +554,7 @@ Camera:
   far clip plane: 1000
   field of view: 57
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -933,7 +933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321087252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.06, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3891327}
@@ -951,8 +951,8 @@ GameObject:
   - component: {fileID: 1421913874}
   - component: {fileID: 1421913873}
   - component: {fileID: 1421913872}
-  m_Layer: 0
-  m_Name: Better Platforms
+  m_Layer: 8
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4080,16 +4080,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2984456259665843195, guid: b2fbb470ee1c10040b9304fee712a048,
-        type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -1838011856389876075, guid: b2fbb470ee1c10040b9304fee712a048,
-        type: 3}
-      propertyPath: speed
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2fbb470ee1c10040b9304fee712a048, type: 3}
 --- !u!1 &1697710762
@@ -4761,7 +4751,7 @@ MonoBehaviour:
   minGroundNormalY: 0.65
   rb: {fileID: 0}
   jumpTakeOffSpeed: 13
-  maxSpeed: 8
+  maxSpeed: 7
 --- !u!1 &1905032819
 GameObject:
   m_ObjectHideFlags: 0

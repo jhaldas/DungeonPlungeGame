@@ -29,10 +29,13 @@ public class Patrol : MonoBehaviour {
 
 	public Transform groundDetection;
 
+	Vector2 a;
+	Vector2 b;
+
 	// Use this for initialization
 	void Start () {
 		walking = true;
-		direction = Random.Range (0, 1);
+		direction = 0;
 		//crocAnimator = GetComponent<Animator> ();
 		if (direction == 0) {
 			facingRight = false;	
@@ -47,21 +50,32 @@ public class Patrol : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	public float PatrolArea() {
 		//time = Time.deltaTime;
 		//Flip ();
 
-		ControlAnimator ();
+		//ControlAnimator ();
 
-		RaycastHit2D groundInfo = Physics2D.Raycast (groundDetection.position, Vector2.down, distance);
+		a = new Vector2 (groundDetection.position.x - distance, groundDetection.position.y);
+		b = new Vector2(groundDetection.position.x - distance, groundDetection.position.y);
+
+		RaycastHit2D groundInfo = Physics2D.Raycast(a, Vector2.down);
+
+		Debug.Log("Collider: " + groundInfo.collider);
+
+		Debug.DrawRay(a, Vector2.down, Color.white);
 
 		if (groundInfo.collider == false) {
 			speed = -speed;
 			facingRight = !facingRight;
 			Flip ();
-		} 
+		} else{
+			Debug.Log("Hitting: " + groundInfo.collider.name);
+		}
 
-		rb.velocity = new Vector2 (-speed, rb.velocity.y);
+		//rb.velocity = new Vector2 (-speed, rb.velocity.y);
+
+		return -speed;
 	}
 	
 			
@@ -77,11 +91,19 @@ public class Patrol : MonoBehaviour {
 //		
 //		}
 //
-
+/*
 	void Flip(){
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
 		transform.localScale = scale;
+	}
+	*/
+	void Flip(){
+		// Switch the way the player is facing.
+		facingRight = !facingRight;
+
+		transform.Rotate(0f, 180f, 0f);
+		distance = -distance;
 	}
 
 	private void ControlAnimator(){

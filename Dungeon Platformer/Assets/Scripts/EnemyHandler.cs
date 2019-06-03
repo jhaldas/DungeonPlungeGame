@@ -15,19 +15,24 @@ public class EnemyHandler : MonoBehaviour
 
 	public GameObject coinPrefab;
 
+	
+
     // Start is called before the first frame update
     void Start()
     {
 		rb  = gameObject.GetComponent<Rigidbody2D>();
-		enemyHealth = new Health(maxHP);
+		//enemyHealth = new Health(maxHP);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+		/*
 		if(enemyHealth.GetCurrentHP() <= 0){
 			Die();
 		}
+		*/
+		
     }
 
 	void Die(){
@@ -49,6 +54,7 @@ public class EnemyHandler : MonoBehaviour
 		animator.SetBool("isHit", false);
 	}
 
+	
 
 
 }

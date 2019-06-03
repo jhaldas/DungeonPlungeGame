@@ -27,7 +27,7 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
 		if(!player.GetComponent<PlayerController>().IsDead()){
-			transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
+			//transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
 		}
         
     }

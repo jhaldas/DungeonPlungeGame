@@ -7,13 +7,15 @@ public class EnemyMove : PhysicsObject
 	
 	public float speed = 2f;
 
+	public Patrol patrol;
+
 	// Variable used to determine how quickly an enemy will return back to max velocity after taking knockback
 	private float returnRate = 0.2f;
 
     // Start is called before the first frame update
     void Start()
     {
-        targetVelocity = Vector2.left * speed;
+        //targetVelocity = Vector2.left * speed;
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class EnemyMove : PhysicsObject
 		
 		returnToInitialVelocity();
 
-		//targetVelocity = Vector2.left * speed;
+		targetVelocity.x = patrol.PatrolArea();
     }
 
 	public void TakeKnockback(Rigidbody2D rb, float knockback){

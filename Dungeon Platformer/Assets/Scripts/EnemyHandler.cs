@@ -27,11 +27,9 @@ public class EnemyHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-		/*
 		if(enemyHealth.GetCurrentHP() <= 0){
 			Die();
 		}
-		*/
 		
     }
 

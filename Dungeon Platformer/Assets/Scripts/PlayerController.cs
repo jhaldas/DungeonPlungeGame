@@ -23,35 +23,39 @@ public class PlayerController : PhysicsObject
     }
 
     protected override void ComputeVelocity(){
-		move = Vector2.zero;
+		if(isDead != true){
+			move = Vector2.zero;
 
-		move.x = Input.GetAxis("Horizontal");
+			move.x = Input.GetAxis("Horizontal");
 
-		if(move.x > 0 && !facingRight){
-			Flip();
-			facingRight = true;
+			if(move.x > 0 && !facingRight){
+				Flip();
+				facingRight = true;
 
-		}else if(move.x < 0 && facingRight){
-			Flip();
-			facingRight = false;
-		}
-
-
-		if(Input.GetButtonDown("Jump") && grounded){
-			velocity.y = jumpTakeOffSpeed;
-		}
-		else if (Input.GetButtonUp("Jump")){
-			if(velocity.y > 0){
-				velocity.y = velocity.y *.5f;
+			}else if(move.x < 0 && facingRight){
+				Flip();
+				facingRight = false;
 			}
+
+
+			if(Input.GetButtonDown("Jump") && grounded){
+				velocity.y = jumpTakeOffSpeed;
+			}
+			else if (Input.GetButtonUp("Jump")){
+				if(velocity.y > 0){
+					velocity.y = velocity.y *.5f;
+				}
+			}
+
+			targetVelocity = move * maxSpeed;
+
+			if(transform.position.y <= -8){
+				Die();
+			}
+		}else{
+			velocity.x = 0f;
+			velocity.y = 0f;
 		}
-
-		targetVelocity = move * maxSpeed;
-
-		if(transform.position.y <= -8){
-			Die();
-		}
-
 	}
 
 	private void Flip()
@@ -74,6 +78,10 @@ public class PlayerController : PhysicsObject
 		if(col.gameObject.tag == "Enemy"){
 			PlayerTakeKnockback(col.gameObject.GetComponent<PhysicsObject>().velocity, 50f);
 			//move = Vector2.zero;
+		}
+
+		if(col.gameObject.name == "Traps"){
+			Die();
 		}
 	}
 

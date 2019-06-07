@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChunkHandler : MonoBehaviour
 {
 
-	private GameObject[] chunkArray = new GameObject[4];	
+	public GameObject[] chunkArray = new GameObject[4];	
 
 	public GameObject[] chunks;
 
@@ -34,7 +34,11 @@ public class ChunkHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Debug.Log("" + camera.GetCameraPositionX());
+		Debug.Log("" + startingSpawn);
         if(camera.GetCameraPositionX() > startingSpawn){
+			Debug.Log("Creating and Deleting a thing");
+			
 			DeleteChunk();
 			lastChunkIndex = CreateChunk(new Vector3(startingSpawn + 32, 0, 0), 3, lastChunkIndex);
 			startingSpawn += 16;

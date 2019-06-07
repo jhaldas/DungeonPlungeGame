@@ -12,28 +12,30 @@ public class CameraFollow : MonoBehaviour
 
 	public float cameraPosition;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        //GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height/2) / cameraDistance);
+		//GetComponent<UnityEngine.Camera>().orthographicSize = ((Screen.height/2) / cameraDistance);
 		offset = transform.position - player.transform.position;
 		Debug.Log("Orthographic Size: " + GetComponent<UnityEngine.Camera>().orthographicSize);
 
-		cameraPosition = transform.position.x;
+		
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+		//transform.position = player.transform.position + offset;
 		if(!player.GetComponent<PlayerController>().IsDead()){
-			//transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
+			transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
 		}
+		cameraPosition = transform.position.x;
         
     }
 
 	void Update(){
-		cameraPosition = transform.position.x;
+		//cameraPosition = transform.position.x;
 	}
 
 	public float GetCameraPositionX(){

@@ -21,10 +21,6 @@ public class PlayerMovement : MonoBehaviour
 	int money = 0;
 
     // Start is called before the first frame update
-    void Start()
-    {
-		playerHealth = new Health(maxHP);
-    }
 
     // Update is called once per frame
     void Update()

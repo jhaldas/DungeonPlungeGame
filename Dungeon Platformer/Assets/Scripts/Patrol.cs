@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrol : MonoBehaviour {
+public class Patrols : MonoBehaviour {
 
 	public float speed;
 	public float aggroSpeed;
@@ -32,6 +32,8 @@ public class Patrol : MonoBehaviour {
 	Vector2 a;
 	Vector2 b;
 
+	private Collider2D collider;
+
 	// Use this for initialization
 	void Start () {
 		walking = true;
@@ -43,16 +45,25 @@ public class Patrol : MonoBehaviour {
 			facingRight = true;
 		}
 		rb = GetComponent<Rigidbody2D> ();
+		collider = GetComponent<Collider2D>();
 		//crocAnimator = GetComponent<Animator>;
 
 		idleTime = Random.Range (minWalkingTime, maxWalkingTime);
 		walkTime = Random.Range (minWalkingTime, maxWalkingTime);
 	}
+
+	void Update(){
+		Debug.Log("THERE IS A COLLISION HAPPENING.");
+
+		Flip();
+		
+	}
 	
 	// Update is called once per frame
 	public float PatrolArea() {
-		//time = Time.deltaTime;
-		//Flip ();
+		Debug.Log("Apdsodjoasjdoiajsdio");
+		//tim(e = Time.deltaTime;
+		Flip ();
 
 		//ControlAnimator ();
 
@@ -73,11 +84,11 @@ public class Patrol : MonoBehaviour {
 		} else{
 			Debug.Log("Hitting: " + groundInfo.collider.name);
 		}
-
 		//rb.velocity = new Vector2 (-speed, rb.velocity.y);
-
 		return -speed;
 	}
+
+	
 	
 			
 //		if(!aggro){
@@ -99,12 +110,17 @@ public class Patrol : MonoBehaviour {
 		transform.localScale = scale;
 	}
 	*/
+	
 	void Flip(){
 		// Switch the way the player is facing.
 		facingRight = !facingRight;
 
 		transform.Rotate(0f, 180f, 0f);
 		distance = -distance;
+	}
+
+	public void Hello(){
+		Debug.Log("Hello");
 	}
 
 	private void ControlAnimator(){
@@ -114,4 +130,8 @@ public class Patrol : MonoBehaviour {
 			//crocAnimator.ResetTrigger ("walking");
 		}
 	}
+
+	
+
+	
 }

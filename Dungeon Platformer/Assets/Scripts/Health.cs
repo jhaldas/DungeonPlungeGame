@@ -10,8 +10,7 @@ public class Health : MonoBehaviour
 	public float maxHP;
 	private float currentHP;
 
-	public Health(float maxHP){
-		this.maxHP = maxHP;
+	void Awake(){
 		currentHP = maxHP;
 	}
 
@@ -22,7 +21,6 @@ public class Health : MonoBehaviour
 	// The following method takes health away from the targets current HP and returns true the target took lethal damage
 	public bool TakeDamage(float dmgDealth){
 		currentHP = currentHP - dmgDealth;
-		//healthBar.printHello();
 		if(currentHP <= 0){
 			currentHP = 0;
 			return true;

@@ -18,6 +18,7 @@ public class PlayerController : PhysicsObject
 
 	Vector2 move;
 
+	public GameObject death;
     // Start is called before the first frame update
     void Start()
     {
@@ -104,6 +105,9 @@ public class PlayerController : PhysicsObject
 
 	public void Die(){
 		isDead = true;
+		Instantiate(death, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0f), transform.rotation);
+		gameObject.SetActive(false);
+		
 	}
 
 	protected void PlayerTakeKnockback(Vector2 velocity, float knockback){

@@ -4932,6 +4932,7 @@ MonoBehaviour:
   animator: {fileID: 1879263124}
   jumpTakeOffSpeed: 13
   maxSpeed: 7
+  death: {fileID: 8881981407959523066, guid: 13b23472dd3a2be42b0b1dd43071e1cb, type: 3}
 --- !u!1 &1905032819
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : PhysicsObject
 {
 
+	public Animator animator;
+
 	public float jumpTakeOffSpeed = 7;
 	public float maxSpeed = 7;
 
@@ -31,10 +33,17 @@ public class PlayerController : PhysicsObject
 			if(move.x > 0 && !facingRight){
 				Flip();
 				facingRight = true;
-
+				
 			}else if(move.x < 0 && facingRight){
 				Flip();
 				facingRight = false;
+				
+			}
+			
+			if(move.x != 0f){
+				animator.SetBool("isWalking", true);
+			}else{
+				animator.SetBool("isWalking", false);
 			}
 
 

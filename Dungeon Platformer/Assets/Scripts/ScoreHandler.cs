@@ -32,9 +32,9 @@ public class ScoreHandler: MonoBehaviour
 
 		if(gameStart == false){
 			
-			Debug.Log("Here");
+			//Debug.Log("Here");
 			if(Input.anyKey){
-				Debug.Log("Key pressed");
+				//Debug.Log("Key pressed");
 				Time.timeScale = 1f;
 				gameStart = true;
 				startScreen.SetActive(false);

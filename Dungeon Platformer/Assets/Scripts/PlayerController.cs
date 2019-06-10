@@ -38,13 +38,18 @@ public class PlayerController : PhysicsObject
 			}else if(move.x < 0 && facingRight){
 				Flip();
 				facingRight = false;
-				
 			}
 			
 			if(move.x != 0f){
 				animator.SetBool("isWalking", true);
 			}else{
 				animator.SetBool("isWalking", false);
+			}
+
+			if(grounded){
+				animator.SetBool("isGrounded", true);
+			}else{
+				animator.SetBool("isGrounded", false);
 			}
 
 

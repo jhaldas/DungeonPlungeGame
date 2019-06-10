@@ -18,7 +18,7 @@ public class PhysicsObject: MonoBehaviour
 	protected const float minMoveDistance = 0.001f;
 	protected ContactFilter2D contactFilter;
 	protected RaycastHit2D[] hitBuffer =new RaycastHit2D[16];
-	protected const float shellRadius = 0.03f;
+	protected const float shellRadius = 0.1f;
 	protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>(16);
 
     // Start is called before the first frame update

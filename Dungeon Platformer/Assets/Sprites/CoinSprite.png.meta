@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: 7ddaa3417ce26c64ab7b4b5d63ac9a0a
+guid: e45c5d9078f8624459527c71d222a190
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8370408650401479130
-    second: GoofyAdventurer_0
+      213: 1483268659738890104
+    second: CoinSprite_0
   - first:
-      213: 3207025554343959670
-    second: GoofyAdventurer_1
+      213: -2922853501061035681
+    second: CoinSprite_1
   - first:
-      213: -9128381411426627624
-    second: GoofyAdventurer_2
+      213: -3932986660946287442
+    second: CoinSprite_2
   - first:
-      213: 6338917844442617039
-    second: GoofyAdventurer_3
+      213: 619494938560263944
+    second: CoinSprite_3
   - first:
-      213: 2896123019985284188
-    second: GoofyAdventurer_4
+      213: -6461000983658350858
+    second: CoinSprite_4
   - first:
-      213: 2727324919168728889
-    second: GoofyAdventurer_5
+      213: 665651760842725678
+    second: CoinSprite_5
   - first:
-      213: 8070072416163943547
-    second: GoofyAdventurer_6
-  - first:
-      213: 6452160458814446108
-    second: GoofyAdventurer_7
-  - first:
-      213: 4389398358539459191
-    second: GoofyAdventurer_8
-  - first:
-      213: 6437775519658261384
-    second: GoofyAdventurer_9
+      213: -977873896470386382
+    second: CoinSprite_6
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -75,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 14
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,211 +105,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoofyAdventurer_0
+      name: CoinSprite_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 0, z: 10, w: 4}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c347b35051e8d1e459ebbcd1ee956f83
-      internalID: 8370408650401479130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f3e465d8cdef0a49a3b189363d8ac44
-      internalID: 3207025554343959670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a807bcffb05fe447986fc24dc506730
-      internalID: -9128381411426627624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 399806b13a870dc4291af75ac1bfba5d
-      internalID: 6338917844442617039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d59ba3bcb73e0346a77a6d5a73b026c
-      internalID: 2896123019985284188
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abb8fae1df7dfaa4f82d2a3c229c0c13
-      internalID: 2727324919168728889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cda427d0c44d634fac59b5a1a77024c
-      internalID: 8070072416163943547
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 10, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 440371598c48ffd4a9d8624ea234674f
-      internalID: 6452160458814446108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GoofyAdventurer_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6be455dfc2ca0141a9de14756b2ec5b
-      internalID: 4389398358539459191
+      spriteID: cb5473dece62bfe459ea7b6137e9f4b7
+      internalID: 1483268659738890104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoofyAdventurer_9
+      name: CoinSprite_1
       rect:
         serializedVersion: 2
-        x: 288
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 9, y: 0, z: 9, w: 3}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c8764b38dff42b4b94c6d0d1d1436c7
-      internalID: 6437775519658261384
+      spriteID: d126bb00c191269408de5a388367993d
+      internalID: -2922853501061035681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinSprite_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8219682590a7a46b5af9f0535fe534
+      internalID: -3932986660946287442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinSprite_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a7a70783fb8c349822e9a9125c7136
+      internalID: 619494938560263944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinSprite_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c5d354fe852bb4c90e9de68b34aded
+      internalID: -6461000983658350858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinSprite_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51931724594cb224b967343f146b8c30
+      internalID: 665651760842725678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoinSprite_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea78d06f30d1ea549a02cc002d5e16bd
+      internalID: -977873896470386382
       vertices: []
       indices: 
       edges: []
@@ -326,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: dfa05f8c3625d5a42823ce62f7e420e0
+    spriteID: 0236227aec2b9c04da7cd94bece9db04
     internalID: 0
     vertices: []
     indices: 

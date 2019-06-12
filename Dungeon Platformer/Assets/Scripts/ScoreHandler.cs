@@ -13,7 +13,7 @@ public class ScoreHandler: MonoBehaviour
 
 	private float timer = 0f;
 
-	private bool gameStart;
+	private bool gameStart = false;
 
 	private double score;
 
@@ -22,7 +22,6 @@ public class ScoreHandler: MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		gameStart = false;
 		Time.timeScale = 0f;
     }
 

@@ -10,11 +10,7 @@
 	- [x] Basic movement and jumping
 	- [x] Death and death screen
 	- [ ] Main Menu
-      	- [x] Start button
-      	- [ ] Options button
-              - [ ] Music toggle
-              - [ ] Sound effect toggle
-              - [ ] Resolution
+      	      - [x] Start button
       	- [ ] Exit button
 	- [ ] Music
 	- [ ] Sound effects

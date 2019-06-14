@@ -12,10 +12,10 @@
 	- [ ] Main Menu
 		- [ ] Start button
       	- [ ] Exit button
-		- [ ] Options button
-              - [ ] Music toggle
-              - [ ] Sound effect toggle
-              - [ ] Resolution
+	- [ ] Options button
+		- [ ] Music toggle
+		- [ ] Sound effect toggle
+		- [ ] Resolution
 	- [ ] Music
 	- [ ] Sound effects
 	- [ ] Pause Screen

@@ -10,8 +10,8 @@
 	- [x] Basic movement and jumping
 	- [x] Death and death screen
 	- [ ] Main Menu
-      	      - [x] Start button
-      	- [ ] Exit button
+      	      - Start button
+      	      - Exit button
 	- [ ] Music
 	- [ ] Sound effects
 	- [ ] Pause Screen

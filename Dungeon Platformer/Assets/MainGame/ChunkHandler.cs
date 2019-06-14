@@ -38,7 +38,6 @@ public class ChunkHandler : MonoBehaviour
 		Debug.Log("" + startingSpawn);
         if(camera.GetCameraPositionX() > startingSpawn){
 			Debug.Log("Creating and Deleting a thing");
-			
 			DeleteChunk();
 			lastChunkIndex = CreateChunk(new Vector3(startingSpawn + 32, 0, 0), 3, lastChunkIndex);
 			startingSpawn += 16;

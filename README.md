@@ -13,8 +13,8 @@
          - [x] Start button
          - [ ] Options button
                - [ ] Music toggle
-             - [ ] Sound effect toggle
-             - [ ] Resolution
+               - [ ] Sound effect toggle
+               - [ ] Resolution
          - [ ] Exit button
   - [ ] Music
   - [ ] Sound effects

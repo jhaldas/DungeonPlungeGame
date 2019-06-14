@@ -10,8 +10,12 @@
 	- [x] Basic movement and jumping
 	- [x] Death and death screen
 	- [ ] Main Menu
-      	      - Start button
-      	      - Exit button
+		- [ ] Start button
+      	- [ ] Exit button
+		- [ ] Options button
+              - [ ] Music toggle
+              - [ ] Sound effect toggle
+              - [ ] Resolution
 	- [ ] Music
 	- [ ] Sound effects
 	- [ ] Pause Screen
@@ -22,4 +26,4 @@
 
 2. Extra Stuff
 	- [ ] Coin and shop system
-      	- [ ] Skins
+		- [ ] Skins

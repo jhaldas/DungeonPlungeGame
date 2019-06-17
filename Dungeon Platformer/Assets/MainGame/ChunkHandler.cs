@@ -24,11 +24,11 @@ public class ChunkHandler : MonoBehaviour
 		
 		CreateChunk(chunks[0], new Vector3(0, 0, 0), 0);
 		
-		lastChunkIndex = CreateChunk(new Vector3(16, 0, 0), 1, lastChunkIndex);
+		lastChunkIndex = CreateChunk(new Vector3(16f, 0, 0), 1, lastChunkIndex);
 
-		lastChunkIndex = CreateChunk(new Vector3(32, 0, 0), 2, lastChunkIndex);
+		lastChunkIndex = CreateChunk(new Vector3(32f, 0, 0), 2, lastChunkIndex);
 		
-		lastChunkIndex = CreateChunk(new Vector3(48, 0, 0), 3, lastChunkIndex);
+		lastChunkIndex = CreateChunk(new Vector3(48f, 0, 0), 3, lastChunkIndex);
 	}
 
     // Update is called once per frame

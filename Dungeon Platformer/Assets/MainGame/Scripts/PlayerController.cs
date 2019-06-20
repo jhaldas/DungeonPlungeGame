@@ -55,6 +55,7 @@ public class PlayerController : PhysicsObject
 
 			if(Input.GetButtonDown("Jump") && grounded){
 				velocity.y = jumpTakeOffSpeed;
+                FindObjectOfType<AudioManager>().Play("Jump");
 			}
 			else if (Input.GetButtonUp("Jump")){
 				if(velocity.y > 0){
@@ -109,7 +110,8 @@ public class PlayerController : PhysicsObject
 	}
 
 	public void Die(){
-		isDead = true;
+        FindObjectOfType<AudioManager>().Play("Death");
+        isDead = true;
 		Instantiate(death, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0f), transform.rotation);
 		gameObject.SetActive(false);
 		

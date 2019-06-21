@@ -16,19 +16,19 @@ public class ChunkHandler : MonoBehaviour
 	int lastChunkIndex = 0;
 
 	// What position the camera has to cross in order to spawn the next chunk down the road
-	private float startingSpawn = 32f;
+	private float startingSpawn = 16f;
 
 
 	void Start(){
 		totalChunks = chunks.Length;
 		
-		CreateChunk(chunks[0], new Vector3(0, 0, 0), 0);
-		
-		lastChunkIndex = CreateChunk(new Vector3(16f, 0, 0), 1, lastChunkIndex);
+		CreateChunk(chunks[0], new Vector3(-16f, 0, 0), 0);
 
-		lastChunkIndex = CreateChunk(new Vector3(32f, 0, 0), 2, lastChunkIndex);
+        CreateChunk(chunks[0], new Vector3(0f, 0, 0), 1);
+
+        lastChunkIndex = CreateChunk(new Vector3(16f, 0, 0), 2, lastChunkIndex);
 		
-		lastChunkIndex = CreateChunk(new Vector3(48f, 0, 0), 3, lastChunkIndex);
+		lastChunkIndex = CreateChunk(new Vector3(32f, 0, 0), 3, lastChunkIndex);
 	}
 
     // Update is called once per frame

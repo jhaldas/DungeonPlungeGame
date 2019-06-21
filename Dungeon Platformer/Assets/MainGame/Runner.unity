@@ -496,7 +496,9 @@ MonoBehaviour:
   - {fileID: 4388621025988271746, guid: 1fa8c8b73799f8245ad2154fae289dc9, type: 3}
   - {fileID: 1860575694504043249, guid: 15521f9e62bec204088ed7bb58de7cd3, type: 3}
   - {fileID: 4537133518759267007, guid: 2f6dbefd63f221b4d8bdcd7b42140652, type: 3}
-  camera: {fileID: 519420030}
+  - {fileID: 616972863574831193, guid: 9e69eb1647adb46c285031abcf641aaf, type: 3}
+  - {fileID: 7906781462488861832, guid: 81269c41222d5465da731865b8ac98e5, type: 3}
+  camera: {fileID: 519420028}
   totalChunks: 4
 --- !u!156049354 &172173943
 Grid:
@@ -5408,7 +5410,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

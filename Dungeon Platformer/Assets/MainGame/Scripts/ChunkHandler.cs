@@ -9,7 +9,7 @@ public class ChunkHandler : MonoBehaviour
 
 	public GameObject[] chunks;
 
-	public CameraFollow camera; 
+	public GameObject camera; 
 
 	public int totalChunks;
 
@@ -34,9 +34,9 @@ public class ChunkHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Debug.Log("" + camera.GetCameraPositionX());
+		Debug.Log("" + camera.transform.position.x);
 		Debug.Log("" + startingSpawn);
-        if(camera.GetCameraPositionX() > startingSpawn){
+        if(camera.transform.position.x > startingSpawn){
 			Debug.Log("Creating and Deleting a thing");
 			DeleteChunk();
 			lastChunkIndex = CreateChunk(new Vector3(startingSpawn + 32, 0, 0), 3, lastChunkIndex);
@@ -44,16 +44,19 @@ public class ChunkHandler : MonoBehaviour
 		}
     }
 
-	// For choosing a specific chunk index
+	// For choosing a specific chunk index, and spawning it at position
 	void CreateChunk(GameObject newChunk, Vector3 position, int arrayPos){
 		chunkArray[arrayPos] = Instantiate(newChunk);
 		chunkArray[arrayPos].transform.position = position;
 	}
 
-	// For choosing a random chunk different from the previous
-	int CreateChunk(Vector3 position, int arrayPos, int lastChunkIndex){
+	// For choosing a random chunk different from the previous, and spawning it at position.
+    // Returns an integer of the last chunk index so the next call can choose a different chunk.
+    // This prevents the Chunk Handler from spawning 2 of the same chunk consecutively and making
+    // the platforms appear more random.
+	int CreateChunk(Vector3 position, int arrayPos, int lastIndex){
 		int chunkSelect = Random.Range(0, totalChunks);
-		while(chunkSelect == lastChunkIndex){
+		while(chunkSelect == lastIndex){
 			chunkSelect = Random.Range(0, totalChunks);
 		}
 		chunkArray[arrayPos] = Instantiate(chunks[chunkSelect]);
@@ -62,6 +65,7 @@ public class ChunkHandler : MonoBehaviour
 		return chunkSelect;
 	}
 
+    // Deletes the chunk in position zero and moves all other chunks 1 up in the array.
 	void DeleteChunk(){
 		Destroy(chunkArray[0]);
 		chunkArray[0] = chunkArray[1];

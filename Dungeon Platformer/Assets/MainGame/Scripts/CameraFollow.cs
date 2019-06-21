@@ -8,7 +8,7 @@ public class CameraFollow : MonoBehaviour
 	public GameObject player;
 	[Range(1, 50f)]public float cameraDistance = 30f;
 	private Vector3 offset;
-	[Range(1, 1000f)] public float cameraSpeed = 50;
+	[Range(1, 1000f)] public float cameraSpeed;
 
 	public float cameraPosition;
 
@@ -25,12 +25,15 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
 		//transform.position = player.transform.position + offset;
 		if(!player.GetComponent<PlayerController>().IsDead()){
 			transform.position = transform.position + (((Vector3.right) / 100) * cameraSpeed);//player.transform.position + offset;
 		}
 		cameraPosition = transform.position.x;
+
+        if (cameraSpeed < 13) {
+            cameraSpeed += 0.001f;
+        }
         
     }
 

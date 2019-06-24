@@ -21,14 +21,14 @@ public class ChunkLoader : MonoBehaviour
 
 
 	void Start(){
-		startingSpawn = chunkSize * 2;
+		startingSpawn = chunkSize;
 		totalChunks = numChunks.Length;
 
 
-		CreateChunk(numChunks[0], new Vector3(0, 0, 0), 0);
-		CreateChunk(numChunks[0], new Vector3(chunkSize, 0, 0), 1);
-		CreateChunk(numChunks[0], new Vector3(chunkSize * 2, 0, 0), 2);
-		CreateChunk(numChunks[0], new Vector3(chunkSize * 3, 0, 0), 3);
+		CreateChunk(numChunks[0], new Vector3(-chunkSize, 0, 0), 0);
+		CreateChunk(numChunks[0], new Vector3(0, 0, 0), 1);
+		CreateChunk(numChunks[0], new Vector3(chunkSize, 0, 0), 2);
+		CreateChunk(numChunks[0], new Vector3(chunkSize * 2, 0, 0), 3);
 
 	}
 
@@ -41,7 +41,7 @@ public class ChunkLoader : MonoBehaviour
 			//Debug.Log("Creating and Deleting a thing");
 			DeleteChunk();
 			lastChunkIndex = CreateChunk(new Vector3(startingSpawn + (chunkSize * 2), 0, 0), 3, lastChunkIndex);
-			startingSpawn += 16;
+			startingSpawn += chunkSize;
 		}
     }
 

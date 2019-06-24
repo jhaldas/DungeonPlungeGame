@@ -1247,7 +1247,12 @@ MonoBehaviour:
   - name: Death
     clip: {fileID: 8300000, guid: 475ac8a27ba2f4545add2b1ecfab3102, type: 3}
     volume: 0.507
-    pitch: -3
+    pitch: 1
+    source: {fileID: 0}
+  - name: Coin
+    clip: {fileID: 8300000, guid: 250b720e547ba4ea682518dd8a7687fa, type: 3}
+    volume: 0.507
+    pitch: 1
     source: {fileID: 0}
 --- !u!4 &892916443
 Transform:

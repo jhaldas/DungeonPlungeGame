@@ -101,7 +101,8 @@ public class PlayerController : PhysicsObject
 		if(col.gameObject.tag == "Coin"){
 			Destroy(col.gameObject);
 			money += 5;
-		}
+            FindObjectOfType<AudioManager>().Play("Coin");
+        }
 
 		if(col.gameObject.tag == "Enemy"){
 			PlayerTakeKnockback(col.gameObject.GetComponent<PhysicsObject>().velocity, 50f);

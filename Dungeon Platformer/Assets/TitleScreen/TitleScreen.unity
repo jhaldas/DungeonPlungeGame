@@ -254,7 +254,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000097752, y: -298}
+  m_AnchoredPosition: {x: 0.0000097752, y: -284}
   m_SizeDelta: {x: 334.87, y: 87.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &149196573
@@ -782,7 +782,7 @@ MonoBehaviour:
   - {fileID: 5664279968721126283, guid: 29331dd1f5e264a419305cffd42e65cf, type: 3}
   - {fileID: 5664279968721126283, guid: 29331dd1f5e264a419305cffd42e65cf, type: 3}
   camera: {fileID: 71913277}
-  chunkSize: 18
+  chunkSize: 17.8
 --- !u!1 &1211590005
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,18 +864,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1211590008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 898910194}
-        m_MethodName: StartGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1211590008
@@ -997,7 +986,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 898910194}
-        m_MethodName: StartGame
+        m_MethodName: Options
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1772,7 +1761,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -427.17}
+  m_AnchoredPosition: {x: 0, y: -417}
   m_SizeDelta: {x: 500.27, y: 80.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125017899
@@ -1819,7 +1808,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 898910194}
-        m_MethodName: StartGame
+        m_MethodName: Options
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

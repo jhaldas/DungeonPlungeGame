@@ -26,6 +26,18 @@ public class PlayerController : PhysicsObject
     }
 
     protected override void ComputeVelocity(){
+
+        // Toggles music based on whether or not player has selected music or not
+        if (PlayerPrefs.GetInt("Music") == -1)
+        {
+            GetComponent<AudioSource>().mute = true;
+            Debug.Log("Playing Music");
+        }
+        else {
+            GetComponent<AudioSource>().mute = false;
+            Debug.Log("Not Playing Music");
+        }
+
 		if(isDead != true){
 			move = Vector2.zero;
 

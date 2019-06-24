@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainGame/Runner.unity
     guid: b32dd0d46658aad4dafadb6213a58224
+  - enabled: 1
+    path: Assets/Options/Options.unity
+    guid: 80f210835e7db4e8ea4ad47345713b69
   m_configObjects: {}

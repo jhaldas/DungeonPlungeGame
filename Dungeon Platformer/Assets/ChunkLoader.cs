@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class ChunkLoader : MonoBehaviour
 {
 	public GameObject[] chunkArray = new GameObject[0];	
@@ -39,10 +35,10 @@ public class ChunkLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		Debug.Log("" + camera.transform.position.x);
-		Debug.Log("" + chunkSize);
+		//Debug.Log("" + camera.transform.position.x);
+		//Debug.Log("" + chunkSize);
         if(camera.transform.position.x > startingSpawn){
-			Debug.Log("Creating and Deleting a thing");
+			//Debug.Log("Creating and Deleting a thing");
 			DeleteChunk();
 			lastChunkIndex = CreateChunk(new Vector3(startingSpawn + (chunkSize * 2), 0, 0), 3, lastChunkIndex);
 			startingSpawn += 16;

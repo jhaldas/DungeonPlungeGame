@@ -3,7 +3,7 @@
 
 
 ## Description
-###### The purpose of this project is to make a basic 2D platforming game using Unity.
+The purpose of this project is to make a basic 2D platforming game using Unity.
 
 ## Installation
 #### Using Unity Hub

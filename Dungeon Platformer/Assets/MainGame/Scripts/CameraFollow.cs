@@ -37,10 +37,6 @@ public class CameraFollow : MonoBehaviour
         
     }
 
-	void Update(){
-		//cameraPosition = transform.position.x;
-	}
-
 	public float GetCameraPositionX(){
 		return cameraPosition;
 	}

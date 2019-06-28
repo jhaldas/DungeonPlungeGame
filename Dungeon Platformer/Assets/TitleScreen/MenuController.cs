@@ -10,6 +10,14 @@ public class MenuController : MonoBehaviour
     public void Start()
     {
 
+        //PlayerPrefs.DeleteAll();
+
+        // Creates a global variable Highscore
+        if (!PlayerPrefs.HasKey("Highscore")) {
+            Debug.Log("Initiallising Highscore");
+            PlayerPrefs.SetInt("Highscore", 0);
+        }
+
         // Only runs on game start and won't repeat when going back to main menu
         if (PlayerPrefs.GetInt("Sounds") == 0) {
             PlayerPrefs.SetInt("Sounds", 1);

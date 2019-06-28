@@ -16,6 +16,8 @@ public class PlayerController : PhysicsObject
 
 	private bool isDead = false;
 
+    public ScoreHandler scoreHandler;
+
 	Vector2 move;
 
 	public GameObject death;
@@ -127,7 +129,7 @@ public class PlayerController : PhysicsObject
         isDead = true;
 		Instantiate(death, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0f), transform.rotation);
 		gameObject.SetActive(false);
-		
+        scoreHandler.Highscore();
 	}
 
 	protected void PlayerTakeKnockback(Vector2 velocity, float knockback){

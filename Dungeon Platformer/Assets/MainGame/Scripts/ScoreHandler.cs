@@ -11,6 +11,9 @@ public class ScoreHandler: MonoBehaviour
 	public GameObject gameOver;
 	public GameObject startScreen;
 
+    public GameObject newHighscoreText;
+    public GameObject displayHighscoreText;
+
 	private float timer = 0f;
 
 	private bool gameStart = false;
@@ -29,7 +32,9 @@ public class ScoreHandler: MonoBehaviour
     void Update()
     {
 
-		if(gameStart == false){
+        Debug.Log("Highscore: " + PlayerPrefs.GetInt("Highscore"));
+        displayHighscoreText.GetComponent<Text>().text = "Highscore: " + PlayerPrefs.GetInt("Highscore");
+        if (gameStart == false){
 			
 			//Debug.Log("Here");
 			if(Input.anyKey){
@@ -46,7 +51,6 @@ public class ScoreHandler: MonoBehaviour
 			if(player.GetComponent<PlayerController>().IsDead()){
 				finalScore.text = "Final Score: " + score.ToString();
 				gameOver.SetActive(true);
-				
 			}else{
 				timer += Time.deltaTime;
 			}
@@ -54,4 +58,27 @@ public class ScoreHandler: MonoBehaviour
     
 	
 	}
+
+    // Method used to determine whether or not the player set a highscore.
+    // If so, a "New Highscore!" text will be displayed on gameover screen.
+    public bool Highscore()
+    {
+        int highscore = PlayerPrefs.GetInt("Highscore");
+
+        // Sets new highscore if player gets new personal best.
+        if (score > highscore)
+        {
+            newHighscoreText.SetActive(true);
+            PlayerPrefs.SetInt("Highscore", (int)score);
+            // A new highscore
+            return true;
+        }
+        else
+        {
+            newHighscoreText.SetActive(false);
+            // Not a highscore
+            return false;
+        }
+        
+    }
 }

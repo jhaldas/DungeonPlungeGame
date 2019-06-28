@@ -64,6 +64,9 @@ public class Options : MonoBehaviour
         }
     }
 
+    public void Menu() {
+        SceneManager.LoadScene("TitleScreen");
+    }
     /*
     public void ChangeSFX() {
         if (sounds == -1)

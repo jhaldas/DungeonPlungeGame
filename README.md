@@ -9,18 +9,18 @@
 1. Bare Essentials
 	- [x] Basic movement and jumping
 	- [x] Death and death screen
-	- [ ] Main Menu
+	- [x] Main Menu
 		- [x] Start button
-		- [ ] Exit button
-	- [ ] Options button
-		- [ ] Music toggle
-		- [ ] Sound effect toggle
+		- [x] Exit button
+	- [x] Options button
+		- [x] Music toggle
+		- [x] Sound effect toggle
 		- [ ] Resolution
-	- [ ] Music
-	- [ ] Sound effects
-	- [ ] Pause Screen
-      	- [ ] Back to main menu button
-      	- [ ] Options button
+	- [x] Music
+	- [x] Sound effects
+	- [x] Pause Screen
+      	- [x] Back to main menu button
+      	- [x] Options button
 	- [ ] 10 Unique level chunks
 	- [x] Points system
 

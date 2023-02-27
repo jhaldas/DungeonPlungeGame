@@ -54,7 +54,7 @@ TextureImporter:
       213: -7023807301613270683
     second: DungeonTilesetSpriteSheet_16
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -74,6 +74,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,8 +85,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -105,11 +107,16 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -120,7 +127,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -131,6 +139,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -501,6 +522,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DungeonTilesetSpriteSheet_11: -8693151359655264248
+      DungeonTilesetSpriteSheet_13: -6826676001945724848
+      DungeonTilesetSpriteSheet_2: -1829797362259430289
+      DungeonTilesetSpriteSheet_4: -1271198346536994181
+      DungeonTilesetSpriteSheet_8: 2886245054548695361
+      DungeonTilesetSpriteSheet_14: -8896917582108996261
+      DungeonTilesetSpriteSheet_12: 8711261812440248755
+      DungeonTilesetSpriteSheet_9: 5115231280436419090
+      DungeonTilesetSpriteSheet_1: 8176394449217875532
+      DungeonTilesetSpriteSheet_3: -6506772497605110470
+      DungeonTilesetSpriteSheet_6: 8368115339422073543
+      DungeonTilesetSpriteSheet_10: -2140885966036275488
+      DungeonTilesetSpriteSheet_5: 2133233173053095692
+      DungeonTilesetSpriteSheet_15: 8106913615763652436
+      DungeonTilesetSpriteSheet_0: -4828061511316848606
+      DungeonTilesetSpriteSheet_7: -6919802975958084127
+      DungeonTilesetSpriteSheet_16: -7023807301613270683
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

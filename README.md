@@ -1,4 +1,4 @@
-# PlatformGame
+# Dungeon Plunge Game
 ### Goal: Create a simple platforming game in Unity
 
 

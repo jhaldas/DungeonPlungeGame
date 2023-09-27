@@ -98,11 +98,9 @@ public class PlayerController : PhysicsObject
 
 	void OnTriggerEnter2D(Collider2D col)
     {
-		Debug.Log("Here");
-
 		if(col.gameObject.tag == "Coin"){
 			Destroy(col.gameObject);
-			money += 5;
+			scoreHandler.numCoins = scoreHandler.numCoins + 1;
             FindObjectOfType<AudioManager>().Play("Coin");
         }
 

@@ -18,9 +18,13 @@ public class ScoreHandler: MonoBehaviour
 
 	private bool gameStart = false;
 
-	private double score;
+	public double score;
 
 	public Text finalScore;
+
+    public int numCoins = 0;
+
+    public int coinValue = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +49,7 @@ public class ScoreHandler: MonoBehaviour
 			}
 		}else{
 
-			score = System.Math.Round(timer, 1) * 10;
+			score = System.Math.Round(timer, 1) * 10 + (numCoins * coinValue);
 
 			scoreText.text = "Score: " + score.ToString();
 			if(player.GetComponent<PlayerController>().IsDead()){

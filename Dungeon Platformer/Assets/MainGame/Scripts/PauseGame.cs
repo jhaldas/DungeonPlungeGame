@@ -14,7 +14,6 @@ public class PauseGame : MonoBehaviour
 	public void Pause(){
 		paused = true;
 		Time.timeScale = 0f;
-		button.SetActive(false);
         pauseScreen.SetActive(true);
 	}
 
@@ -24,13 +23,25 @@ public class PauseGame : MonoBehaviour
         pauseScreen.SetActive(false);
     }
 
+	public void TogglePause()
+	{
+		if(paused)
+		{
+			Unpause();
+		}
+		else
+		{
+			Pause();
+		}
+	}
+
 
 	public void Update(){
-		if(paused == true){
-			 if(Input.GetButtonDown("Fire1")){
-				Unpause();
-				button.SetActive(true);
-			 }
-		}
+		// if(paused == true){
+		// 	 if(Input.GetButtonDown("Fire1")){
+		// 		Unpause();
+		// 		//button.SetActive(true);
+		// 	 }
+		// }
 	}
 }

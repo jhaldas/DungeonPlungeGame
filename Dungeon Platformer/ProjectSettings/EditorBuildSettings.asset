@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/TitleScreen/TitleScreen.unity
+    path: Assets/Scenes/TitleScreen.unity
     guid: a20e1a1a98c03d547bd060d62365d144
   - enabled: 1
-    path: Assets/MainGame/Runner.unity
+    path: Assets/Scenes/Runner.unity
     guid: b32dd0d46658aad4dafadb6213a58224
   - enabled: 1
     path: Assets/Options/Options.unity

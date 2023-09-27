@@ -42,5 +42,10 @@ public class MenuController : MonoBehaviour
         //Debug.Log("BRUHHHH");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+
 
 }

@@ -12,7 +12,7 @@ public class TitlePlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Screen.SetResolution(480, 480, true);
+        //Screen.SetResolution(480, 480, true);
         offset = transform.position - camera.transform.position;
     }
 

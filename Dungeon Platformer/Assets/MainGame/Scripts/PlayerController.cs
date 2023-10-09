@@ -139,7 +139,10 @@ public class PlayerController : PhysicsObject
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		//Debug.Log("Here");
+		if (col.gameObject.tag == "Death Border") 
+		{
+			Die();
+		}
 		
 	}
 

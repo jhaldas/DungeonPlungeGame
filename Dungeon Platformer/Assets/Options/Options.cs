@@ -9,18 +9,41 @@ public class Options : MonoBehaviour
     int sounds;
     int music;
 
+    float musicVolume;
+    float soundsVolume;
+
     GameObject musicToggle;
     GameObject soundToggle;
 
+    GameObject musicVolumeSlider;
+    GameObject soundsVolumeSlider;
+
     public void Awake()
     {
-        sounds = PlayerPrefs.GetInt("Sounds");
-        music = PlayerPrefs.GetInt("Music");
+        if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("soundsVolume"))
+        {
+            musicVolume = PlayerPrefs.GetFloat("musicVolume");
+            soundsVolume = PlayerPrefs.GetFloat("soundsVolume");
+        }
+        else 
+        {
+            PlayerPrefs.SetFloat("musicVolume", 0.5f);
+            PlayerPrefs.SetFloat("soundsVolume", 0.5f);
+        }
 
-        musicToggle = GameObject.Find("Music");
-        soundToggle = GameObject.Find("Sounds");
+/*        sounds = PlayerPrefs.GetInt("Sounds");
+        music = PlayerPrefs.GetInt("Music");*/
 
-        // Sets Music toggle button to either true or false based on PlayerPrefs variable
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        soundsVolume = PlayerPrefs.GetFloat("soundsVolume"); 
+
+/*        musicToggle = GameObject.Find("Music");
+        soundToggle = GameObject.Find("Sounds");*/
+
+        musicVolumeSlider = GameObject.Find("MusicSlider");
+        soundsVolumeSlider = GameObject.Find("SoundsSlider");
+
+/*        // Sets Music toggle button to either true or false based on PlayerPrefs variable
         if (music == -1)
         {
             musicToggle.GetComponent<Toggle>().isOn = false;
@@ -37,16 +60,22 @@ public class Options : MonoBehaviour
         else if (sounds == 1)
         {
             soundToggle.GetComponent<Toggle>().isOn = true;
+        }*/
+
+        if (musicVolumeSlider != null) 
+        {
+            musicVolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("MusicVolume");
         }
 
-        Debug.Log(sounds = PlayerPrefs.GetInt("Sounds"));
-        Debug.Log(music = PlayerPrefs.GetInt("Music"));
-
+        if (soundsVolumeSlider != null)
+        {
+            soundsVolumeSlider.GetComponent<Slider>().value = PlayerPrefs.GetFloat("SoundsVolume");
+        }
     }
 
     public void Update()
     {
-        if (musicToggle.GetComponent<Toggle>().isOn == false)
+/*        if (musicToggle.GetComponent<Toggle>().isOn == false)
         {
             PlayerPrefs.SetInt("Music", -1);
         }
@@ -61,39 +90,24 @@ public class Options : MonoBehaviour
         else
         {
             PlayerPrefs.SetInt("Sounds", 1);
+        }*/
+
+        if (musicVolumeSlider != null)
+        {
+            musicVolume = musicVolumeSlider.GetComponent<Slider>().value;
+            PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+        }
+
+        if (soundsVolumeSlider != null)
+        {
+            soundsVolume = soundsVolumeSlider.GetComponent<Slider>().value;
+            PlayerPrefs.SetFloat("SoundsVolume", soundsVolume);
         }
     }
 
     public void Menu() {
         SceneManager.LoadScene("TitleScreen");
     }
-    /*
-    public void ChangeSFX() {
-        if (sounds == -1)
-        {
-            sounds = 1; 
-        }
-        else if(sounds == 1) {
-            sounds = -1;
-        }
-        Debug.Log("Setting Int");
-        PlayerPrefs.SetInt("Sounds", sounds);
-    }
-
-    public void ChangeMusic() {
-        if (music == -1)
-        {
-            music = 1;
-        }
-        else if (music == 1)
-        {
-            music = -1;
-        }
-
-        Debug.Log("Setting Int");
-        PlayerPrefs.SetInt("Music", music);
-    }
-    */
 
     // Start is called before the first frame update
     public void BackToMenu() {

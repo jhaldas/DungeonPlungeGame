@@ -20,22 +20,22 @@ public class Options : MonoBehaviour
 
     public void Awake()
     {
-        if (PlayerPrefs.HasKey("musicVolume") || PlayerPrefs.HasKey("soundsVolume"))
+        if (PlayerPrefs.HasKey("MusicVolume") && PlayerPrefs.HasKey("SoundsVolume"))
         {
-            musicVolume = PlayerPrefs.GetFloat("musicVolume");
-            soundsVolume = PlayerPrefs.GetFloat("soundsVolume");
+            musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+            soundsVolume = PlayerPrefs.GetFloat("SoundsVolume");
         }
         else 
         {
-            PlayerPrefs.SetFloat("musicVolume", 0.5f);
-            PlayerPrefs.SetFloat("soundsVolume", 0.5f);
+            PlayerPrefs.SetFloat("MusicVolume", 0.5f);
+            PlayerPrefs.SetFloat("SoundsVolume", 0.5f);
         }
 
 /*        sounds = PlayerPrefs.GetInt("Sounds");
         music = PlayerPrefs.GetInt("Music");*/
 
-        musicVolume = PlayerPrefs.GetFloat("musicVolume");
-        soundsVolume = PlayerPrefs.GetFloat("soundsVolume"); 
+        musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        soundsVolume = PlayerPrefs.GetFloat("SoundsVolume"); 
 
 /*        musicToggle = GameObject.Find("Music");
         soundToggle = GameObject.Find("Sounds");*/
